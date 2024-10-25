@@ -17,7 +17,8 @@ pip install requirements.txt
 python app.py
 '''
 
-## workflow
+## workflows
+
 - update config.yaml
 - update params.yaml
 - update the entity
