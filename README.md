@@ -27,3 +27,6 @@ python app.py
 - update the pipeline
 - update the main.py
 - update the dvc.yaml
+
+
+-[Data Link](https://drive.google.com/file/d/1plqog-ch71Z6EglABvIm_o27t3VXgMdt/view?usp=drive_link)
