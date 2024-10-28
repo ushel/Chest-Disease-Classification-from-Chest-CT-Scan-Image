@@ -29,4 +29,4 @@ python app.py
 - update the dvc.yaml
 
 
--[Data Link](https://drive.google.com/file/d/1plqog-ch71Z6EglABvIm_o27t3VXgMdt/view?usp=drive_link)
+-[Data Link](https://drive.google.com/file/d/1plqog-ch71Z6EglABvIm_o27t3VXgMdt/view?usp=sharing)
