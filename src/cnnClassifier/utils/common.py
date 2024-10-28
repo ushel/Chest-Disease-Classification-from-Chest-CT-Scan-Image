@@ -1,7 +1,7 @@
 import os
 from box.exceptions import BoxValueError
 import yaml 
-from cnnClassifier import logger
+from src.cnnClassifier import logger
 import json
 import joblib
 from ensure import ensure_annotations  # to keep check on datatype and dont overwrite the datatype
@@ -27,7 +27,7 @@ def read_yaml(path_to_yaml:Path) -> ConfigBox:
         ConfigBox: ConfigBox type
     """
     try:
-        with open(path_to_yaml, 'r') as file:
+        with open(path_to_yaml, 'r') as yaml_file:
             content = yaml.safe_load(yaml_file)
             logger.info(f"yaml file: {path_to_yaml} loaded successfully.")
             return ConfigBox(content)
