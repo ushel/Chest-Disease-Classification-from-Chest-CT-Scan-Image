@@ -1,4 +1,5 @@
 # create endpoint
+from src.cnnClassifier.pipeline.stage_04_model_evaluation import EvaluationPipeline
 from src.cnnClassifier.pipeline.stage_03_model_trainer import ModelTrainingPipeline
 from src.cnnClassifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from src.cnnClassifier.pipeline.stage_02_prepare_base_model import PrepareBaseModelTrainingPipeline
@@ -35,3 +36,13 @@ try:
     logger.info(f">>> Stage {STAGE_NAME} completed. <<<")
 except Exception as e:
     logger.error(f"An error occurred during {STAGE_NAME}: {str(e)}")
+    
+STAGE_NAME = 'Evaluation Stage'    
+try:
+    logger.info(f">>> Stage {STAGE_NAME} started <<<")
+    obj = EvaluationPipeline()
+    obj.main()
+    logger.info(f">>> Stage {STAGE_NAME} completed. <<<")
+except Exception as e:
+    logger.exception(e)
+    raise e
