@@ -3,7 +3,7 @@ from pathlib import Path
 import mlflow
 import mlflow.keras
 from urllib.parse import urlparse
-
+import dagshub
 from src.cnnClassifier.entity.config_entity import EvaluationConfig
 from src.cnnClassifier.utils.common import save_json
 
@@ -53,7 +53,7 @@ class Evaluation:
     def log_into_mlflow(self): 
         mlflow.set_registry_uri(self.config.mlflow_uri) 
         tracking_url_type_store= urlparse(mlflow.get_tracking_uri()).scheme
-        
+        dagshub.init(repo_owner='utkarsh.shelke03', repo_name='Chest-Disease-Classification-from-Chest-CT-Scan-Image', mlflow=True)
         with mlflow.start_run():
             mlflow.log_params(self.config.all_params)
             mlflow.log_metrics(

@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Chest-Disease-Classification-from-Chest-CT-Scan-Image/mlruns/0/c88207ddf8f74acf8fb5e8da6941b985/artifacts
+end_time: 1730223035479
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c88207ddf8f74acf8fb5e8da6941b985
+run_name: funny-shrew-698
+run_uuid: c88207ddf8f74acf8fb5e8da6941b985
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730223028554
+status: 3
+tags: []
+user_id: utkar

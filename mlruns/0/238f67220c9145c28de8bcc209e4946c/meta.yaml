@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Chest-Disease-Classification-from-Chest-CT-Scan-Image/mlruns/0/238f67220c9145c28de8bcc209e4946c/artifacts
+end_time: 1730222819322
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 238f67220c9145c28de8bcc209e4946c
+run_name: gaudy-cat-320
+run_uuid: 238f67220c9145c28de8bcc209e4946c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730222812346
+status: 3
+tags: []
+user_id: utkar
