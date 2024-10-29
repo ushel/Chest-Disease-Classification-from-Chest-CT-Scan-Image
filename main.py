@@ -1,6 +1,5 @@
 # create endpoint
-
-from cnnClassifier.pipeline.stage_03_model_trainer import ModelTrainingPipeline
+from src.cnnClassifier.pipeline.stage_03_model_trainer import ModelTrainingPipeline
 from src.cnnClassifier.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from src.cnnClassifier.pipeline.stage_02_prepare_base_model import PrepareBaseModelTrainingPipeline
 from src.cnnClassifier.components.data_ingestion import DataIngestion
