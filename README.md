@@ -30,3 +30,10 @@ python app.py
 
 
 -[Data Link](https://drive.google.com/file/d/1plqog-ch71Z6EglABvIm_o27t3VXgMdt/view?usp=sharing)
+
+
+### DVC command for execution
+
+1. dvc init
+2. dvc repro
+3. dvc dag

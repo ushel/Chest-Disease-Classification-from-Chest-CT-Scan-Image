@@ -1,6 +1,11 @@
-from src.cnnClassifier.components.data_ingestion import DataIngestion
-from src.cnnClassifier.config.configuration import ConfigurationManager
-from src.cnnClassifier import logger
+# import sys
+# sys.path.insert(0, '../src')
+from cnnClassifier.components.data_ingestion import DataIngestion
+from cnnClassifier.config.configuration import ConfigurationManager
+from cnnClassifier import logger
+from pathlib import Path
+import os
+
 
 STAGE_NAME = 'Data Ingestion Stage'
 
@@ -19,7 +24,7 @@ class DataIngestionTrainingPipeline:
         except Exception as e:
             raise e
         
-        
+# Require for DVC
     
 if __name__ == '__main__':
     try:

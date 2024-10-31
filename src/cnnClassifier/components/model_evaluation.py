@@ -4,8 +4,8 @@ import mlflow
 import mlflow.keras
 from urllib.parse import urlparse
 import dagshub
-from src.cnnClassifier.entity.config_entity import EvaluationConfig
-from src.cnnClassifier.utils.common import save_json
+from cnnClassifier.entity.config_entity import EvaluationConfig
+from cnnClassifier.utils.common import save_json
 
 
 class Evaluation:

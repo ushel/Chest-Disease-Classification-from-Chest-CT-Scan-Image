@@ -1,6 +1,7 @@
-from src.cnnClassifier.components.model_trainer import Training
-from src.cnnClassifier.config.configuration import ConfigurationManager
-from src.cnnClassifier import logger
+from cnnClassifier.config.configuration import ConfigurationManager
+# from cnnClassifier.components.model_trainer import Training
+from cnnClassifier.components.model_trainer import Training
+from cnnClassifier import logger
 
 STAGE_NAME = 'Training'
 
@@ -26,4 +27,5 @@ if __name__ == "__main__":
         obj.main()
         logger.info(f">>> Stage {STAGE_NAME} completed. <<<")
     except Exception as e:
-        logger.error(f"An error occurred during {STAGE_NAME}: {str(e)}")
+        logger.exception(e)
+        raise e

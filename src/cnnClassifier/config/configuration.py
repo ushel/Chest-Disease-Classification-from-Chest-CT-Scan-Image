@@ -1,8 +1,8 @@
 import os
-from src.cnnClassifier.entity.config_entity import (DataIngestionConfig, EvaluationConfig, 
+from cnnClassifier.entity.config_entity import (DataIngestionConfig, EvaluationConfig, 
                                                     PrepareBaseModelConfig, TrainingConfig)
-from src.cnnClassifier.constants import *
-from src.cnnClassifier.utils.common import read_yaml, create_directories
+from cnnClassifier.constants import *
+from cnnClassifier.utils.common import read_yaml, create_directories
 
 class ConfigurationManager:
     def __init__(
@@ -52,7 +52,6 @@ class ConfigurationManager:
     def get_training_config(self) -> TrainingConfig:
         training = self.config.training
         prepare_base_model = self.config.prepare_base_model
-        
         params = self.params
         training_data = os.path.join(self.config.data_ingestion.unzip_dir, "Chest-CT-Scan-data")
         create_directories([
