@@ -15,7 +15,7 @@ sudo systemctl status jenkins
 
 ## installing Docker
 
-curl -fsSL https://get.docker.com -o get-docker.sh
+curl -fsSL https://get.docker.com -o get-docker.sh | sudo sh
 
 sudo sh get-docker.sh
 
