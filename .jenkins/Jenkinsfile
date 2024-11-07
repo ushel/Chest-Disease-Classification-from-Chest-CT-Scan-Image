@@ -47,7 +47,7 @@ pipeline {
     stage('Continuous Deployment') {
       steps {
         sshagent(['ssh_key']) {
-          sh "ssh -o StrictHostKeyChecking=no -1 ip-172-31-41-64 50.17.180.55 'cd /home/ubuntu/ && wget https://raw.githubusercontent.com/ushel/Chest-Disease-Classification-from-Chest-CT-Scan-Image/refs/heads/main/docker-compose.yml && export IMAGE_NAME=${ECR_REPOSITORY}:latest && aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com && docker compose up -d '"
+          sh "ssh -o StrictHostKeyChecking=no ip-172-31-41-64 50.17.180.55 'cd /home/ubuntu/ && wget https://raw.githubusercontent.com/ushel/Chest-Disease-Classification-from-Chest-CT-Scan-Image/refs/heads/main/docker-compose.yml && export IMAGE_NAME=${ECR_REPOSITORY}:latest && aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com && docker compose up -d '"
         }
       }
     }
