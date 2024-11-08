@@ -26,28 +26,28 @@ pipeline {
       }
     }
 
-    stage('Build Image') {
-      steps {
-        script {
-          sh 'docker build -t ${ECR_REPOSITORY}:latest .'
-        }
+    // stage('Build Image') {
+    //   steps {
+    //     script {
+    //       sh 'docker build -t ${ECR_REPOSITORY}:latest .'
+    //     }
 
-      }
-    }
+    //   }
+    // }
 
-    stage('Push Image') {
-      steps {
-        script {
-          sh 'docker push ${ECR_REPOSITORY}:latest'
-        }
+    // stage('Push Image') {
+    //   steps {
+    //     script {
+    //       sh 'docker push ${ECR_REPOSITORY}:latest'
+    //     }
 
-      }
-    }
+    //   }
+    // }
 
     stage('Continuous Deployment') {
       steps {
         sshagent(['ssh_key']) {
-          sh "ssh -o StrictHostKeyChecking=no ubuntu 50.17.180.55 'cd /home/ubuntu/ && wget https://raw.githubusercontent.com/ushel/Chest-Disease-Classification-from-Chest-CT-Scan-Image/refs/heads/main/docker-compose.yml && export IMAGE_NAME=${ECR_REPOSITORY}:latest && aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com && docker compose up -d '"
+          sh "ssh -o StrictHostKeyChecking=no ubuntu@54.165.34.195 'cd /home/ubuntu/ && wget https://raw.githubusercontent.com/ushel/Chest-Disease-Classification-from-Chest-CT-Scan-Image/refs/heads/main/docker-compose.yml && export IMAGE_NAME=${ECR_REPOSITORY}:latest && aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com && docker compose up -d '"
         }
       }
     }
