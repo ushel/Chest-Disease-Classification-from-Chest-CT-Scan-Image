@@ -26,23 +26,23 @@ pipeline {
       }
     }
 
-    // stage('Build Image') {
-    //   steps {
-    //     script {
-    //       sh 'docker build -t ${ECR_REPOSITORY}:latest .'
-    //     }
+    stage('Build Image') {
+      steps {
+        script {
+          sh 'docker build -t ${ECR_REPOSITORY}:latest .'
+        }
 
-    //   }
-    // }
+      }
+    }
 
-    // stage('Push Image') {
-    //   steps {
-    //     script {
-    //       sh 'docker push ${ECR_REPOSITORY}:latest'
-    //     }
+    stage('Push Image') {
+      steps {
+        script {
+          sh 'docker push ${ECR_REPOSITORY}:latest'
+        }
 
-    //   }
-    // }
+      }
+    }
 
     stage('Continuous Deployment') {
       steps {
